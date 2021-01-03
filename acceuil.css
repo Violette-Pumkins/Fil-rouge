@@ -2,9 +2,16 @@
 
     font-size:large;
     color: white;
+    background-size: cover;
+    background-position: center;
+    background-image: url('1074x300.png'); height: 200px; color: white;
 } 
+
 textarea{
     resize:none;
     width:100%;
     
+}
+.sidenav{
+    background-color:#556B2F;
 }
