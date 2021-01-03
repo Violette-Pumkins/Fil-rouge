@@ -1,10 +1,16 @@
+#bg{
+    background-image: url(hufflepuff.jpg);
+    background-size:100%;
+    background-attachment: fixed; 
+    background-position:center top;
+}
 #header{
 
     font-size:large;
     color: white;
     background-size: cover;
     background-position: center;
-    background-image: url('1074x300.png'); height: 200px; color: white;
+    background-color:#556B2F ; height: 200px; color: white;
 } 
 
 textarea{
@@ -12,6 +18,24 @@ textarea{
     width:100%;
     
 }
-.sidenav{
-    background-color:#556B2F;
+
+
+#options-co{
+    font-weight:bold;
+    margin-bottom:10px;
+}
+#recherche,.login,#options-co{
+    color:white;
+}
+
+.form-control{
+
+border-radius: 10px;
+}
+#search{
+
+   border-radius:10px 0px 0px 10px; 
+}
+#password, #ok, #basket{
+    border-radius: 10px 10px 10px 10px;
 }
