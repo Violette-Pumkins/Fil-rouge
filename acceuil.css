@@ -3,3 +3,8 @@
     font-size:large;
     color: white;
 } 
+textarea{
+    resize:none;
+    width:100%;
+    
+}
