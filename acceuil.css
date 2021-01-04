@@ -38,4 +38,13 @@ border-radius: 10px;
 }
 #password, #ok, #basket{
     border-radius: 10px 10px 10px 10px;
+} 
+.card-text1{
+    font-size: medium;
+} 
+.card-text2{
+ font-size: small;
+}
+.cardtext3{
+ font-size:smaller;
 }
