@@ -1,26 +1,21 @@
 // variables nécessaires
-
-
+    var serie = series.get("2");
+     console.log(serie.nom);
+  // var auteur= auteurs.get(albums.idAuteur);
 
 
 // initialiser cards
 function initCard(){
     console.log("initCard");
-    // albums.forEach(element => {
-      createCards(albums);  
-    // });
+     albums.forEach(e => {
+      createCards(e);  
+    });
        
 }
 // créer cards
 // attribuer informations
-
-    
-     var serie = series.get("2");
-     console.log(serie.nom);
-    // var auteur= auteurs.get(albums.idAuteur);
-
 function createCards(albums){
-   
+    
     // creation div container
     var divCol = document.createElement("div");
     divCol.setAttribute("class", "col-xs-6 col-md-4 col-sm-6 col-lg-3 mb-4")
@@ -33,10 +28,10 @@ function createCards(albums){
     divCol.appendChild(divPanel);
 
     //image
-    var newimg = document.createElement("img");
-    newimg.setAttribute("class","card-img-top p-1");
-    newimg.src= "albumsMini/"+ series + '-' + albums.numero + '-' + albums.titre + '.jpg';
-    divPanel.appendChild(newimg);
+    // var newimg = document.createElement("img");
+    // newimg.setAttribute("class","card-img-top p-1");
+    // newimg.src= "albumsMini/"+ series + '-' + albums.numero + '-' + albums.titre + '.jpg';
+    // divPanel.appendChild(newimg);
 
     // titre
     var titre= document.createElement("titre");
@@ -44,16 +39,16 @@ function createCards(albums){
     titre.innerHTML=albums.titre;
     divPanel.appendChild(titre);
 
-    // auteur
-    var auteurs= document.createElement("auteur");
-    auteurs.setAttribute("class","card-text1")
-    auteurs.innerHTML=albums.auteurs;
-    divPanel.appendChild(auteurs);
+    // // auteur
+    // var auteurs= document.createElement("auteur");
+    // auteurs.setAttribute("class","card-text1")
+    // auteurs.innerHTML=albums.auteurs;
+    // divPanel.appendChild(auteurs);
 
-    // serie
+    // // serie
     var series= document.createElement("serie");
     series.setAttribute("class","card-text2")
-    series.innerHTML=albums.series;
+    series.innerHTML=serie;
     divPanel.appendChild(series);
 
     // prix
