@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fil-rouge</title>
+    <title>Fil-rouge recherche</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bs4/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="bs4/css/font-awesome.min.css">
-    <link rel="stylesheet" href="acceuil.css">
+    <link rel="stylesheet" href="recherche.css">
 
 </head>
 
@@ -44,68 +44,76 @@
             <div class="col col-sm-12">
 
                 <div class="col-lg-12 mt-3">
-                    <nav class="navbar navbar-light col-md-12 sticky-top p-3" id="navbar">
-                        <div class="row">
-                            <div class="col-md-12 w-100">
-                                <h7 class="mb-3" id="options-co">Rechercher par:</h7>
+                    <nav class="navbar navbar-light col-md-12 p-3 text-center" id="navbar">
+                        <div class="column col-lg-12">
 
-                                <form class="needs-validation mt-3" novalidate="">
-                                    <div class="mb-3">
-                                        <label for="email" class="login">Email </label>
-                                        <input type="email" class="form-control" id="email" placeholder="Your mail">
-                                        <div class="invalid-feedback">
-                                            Please enter a valid email address for connexion.
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="username" class="login">Password</label>
-                                        <div class="input-group">
-                                            <input type="password" class="form-control" id="password"
-                                                placeholder="Your password" required="">
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Valid Password is required.
+                            <h1 class="mb-3" id="options-co">Rechercher par:</h1>
+
+                            <!-- formulaire recherche -->
+
+                            <form class="needs-validation mt-3" novalidate="">
+                                <!-- recherche par titre -->
+                                <div class="row ">
+                                    <div class="col-md-12 w-100">
+                                        <div class="m-3">
+                                            <label for="text" class="search">Rechercher par Titre </label>
+                                            <input type="text" class="form-control" id="titre" placeholder="titre">
+                                            <div class="invalid-feedback">
+                                                Please enter a valid name.
                                             </div>
                                         </div>
-                                    </div>
-                                    <button class="btn btn-outline-light btn-md mt-1 mb-3" id="ok"
-                                        type="submit">OK</button>
-                                    <hr class="mb-4">
-
-                                    <div class="input-group">
+                                        <!-- recherche par serie -->
+                                        <div class="m-3">
+                                            <label for="text" class="search">Rechercher par série</label>
+                                            <input type="text" class="form-control" id="serie" placeholder="serie">
+                                            <div class="invalid-feedback">
+                                                Please enter a valid name.
+                                            </div>
+                                        </div>
+                                        <!-- recherche par auteur -->
+                                        <div class="m-3">
+                                            <label for="text" class="search">Rechercher par Auteur </label>
+                                            <input type="text" class="form-control" id="auteur" placeholder="auteur">
+                                            <div class="invalid-feedback">
+                                                Please enter a valid name.
+                                            </div>
+                                        </div>
 
                                         <div class="input-group-append">
-                                            <button type="submit" class="btn btn-outline-light " id="search">
+                                            <button type="submit" class="btn btn-outline-light btn-block btn-md" id="search">
                                                 <i class="fa fa-search" aria-hidden="true"></i>
                                             </button>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Recherche">
-
                                     </div>
-                                </form>
-                            </div>
-
+                            </form>
                         </div>
-                    </nav>
+
                 </div>
-                <div class="col-md-12 my-3 bg-dark" style="height:1500px;">
-                    <div class="cd-grid col-sm-4 " id="cards">
-                        <div class="row" id="card-contain">
+                </nav>
+            </div>
+            <div class="col-md-12 my-3 bg-dark" style="height:1500px;">
+                <div class="cd-grid col-sm-4 " id="cards">
+                    <div class="row" id="card-contain">
 
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer style="background-color: #B82A0C;">
-            <a href="nousconatcter.html" style="color:white;">Nous contacter</a>
+    <footer style="background-color: #B82A0C;">
+        <a href="nousconatcter.html" style="color:white;">Nous contacter</a>
 
-        </footer>
+    </footer>
 
 
-        <script src="bs4/js/jquery-3.5.1.slim.min.js"></script>
-        <script src="bs4/js/bootstrap.bundle.min.js"></script>
+    <script src="bs4/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="bs4/js/bootstrap.bundle.min.js"></script>
+    <script src="data/albums.js"></script>
+    <script src="data/auteurs.js"></script>
+    <script src="data/series.js"></script>
+    <script src="js/modeleBD.js"> </script>
 </body>
 
 </html>
