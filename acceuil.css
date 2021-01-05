@@ -34,6 +34,10 @@ border-radius: 10px;
 #password, #ok, #basket{
     border-radius: 10px 10px 10px 10px;
 } 
+#cards{
+    max-height:800px;
+    overflow: scroll;
+}
 .card-text1{
     font-size: medium;
 } 

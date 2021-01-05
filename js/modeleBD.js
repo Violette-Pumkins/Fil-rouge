@@ -112,8 +112,8 @@ jQuery(document).ready(function ($) {
 			afficheAlbums(
 				$("#albumMini"),
 				$("#album"),
-				SRC_ALBUM_MINI + nomFic + ".jpg",
-				SRC_ALBUM + nomFic + ".jpg"
+				SRC_ALBUM + nomFic + ".jpg",
+				SRC_ALBUM_MINI + nomFic + ".jpg"
 			);
 
 		}

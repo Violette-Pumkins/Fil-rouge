@@ -3,18 +3,21 @@
 
 // initialiser cards
 function initCard(){
-    console.log("initCard");
-    
      albums.forEach(e => {
       createCards(e);  
     });
        
 }
 
- var reg=/'?/;
-   var chaine= albums.titre;
-   chaine=chaine.replace(reg,"0");
-   console.log(chaine);
+//  var reg=/'+/g;
+   
+//   =.replace(reg,"");
+   console.log(albums.titre);
+// fonction regex
+
+
+
+   
 // créer cards
 // attribuer informations
 function createCards(bdd){
@@ -37,7 +40,19 @@ function createCards(bdd){
     //image
     var newimg = document.createElement("img");
     newimg.setAttribute("class","card-img-top p-1");
-    newimg.src= "albumsMini/"+ serie.nom + '-' + bdd.numero + '-' + bdd.titre + '.jpg';
+    nomFic = serie.nom + '-' + bdd.numero + '-' + bdd.titre;
+
+    nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
+
+    afficheAlbums(
+      $("#albumMini"),
+      $("#album"),
+      "albums/" + nomFic + ".jpg",
+      "albumsMini/" + nomFic + ".jpg"
+    );
+
+    
+     
     divPanel.appendChild(newimg);
 
     // titre
