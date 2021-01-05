@@ -1,0 +1,144 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fil-rouge</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bs4/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bs4/css/font-awesome.min.css">
+    <!-- fichier css -->
+    
+    <link rel="stylesheet" href="pages.css">
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid p-0">
+            <div class="col-xs-12py-3 sticky-top ">
+                <div id="header" class="p-5 text-center">
+                    <p> Site de Apolline et Violette</p>
+                    <div class="row flex-nowrap justify-content-between align-items-center">
+                        <div class="col d-flex justify-content-end align-items-center">
+                            <a class="btn btn-sm btn-outline-light" href="panier.html" id="basket">
+                                <span>
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="bg" >
+        <div class="row">
+            <div class="col-xs-3 sidenav ml-3 mt-3">
+                <nav class="navbar navbar-light col-md-12 sticky-top p-3" id="navbar">
+                    <div class="row">
+                        <div class="col-xs-12 w-100">
+                            <h7 class="mb-3" id="options-co">Options de connexions:</h7>
+
+                            <form class="needs-validation mt-3" novalidate="">
+                                <div class="mb-3">
+                                    <label for="email" class="login">Email </label>
+                                    <input type="email" class="form-control" id="email" placeholder="Your mail">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address for connexion.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="username" class="login">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Your password" required="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Valid Password is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-light btn-md mt-1 mb-3" id="ok" type="submit">OK</button>
+                                <hr class="mb-4">
+
+                                <div class="input-group">
+
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-outline-light " id="search">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Recherche">
+
+                                </div>
+                                <a href="recherche.html" id="recherche">Recherche Avancée</a>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+            <!-- contenu de la page -->
+            <div class="col-xs-9  mt-5 overflow-auto mx-auto">
+                <div class="card mb-3" style="width: 100%;">
+                    <div class="row no-gutters">
+                        <div class="col-xs-4">
+                            <img src="images/noComics.jpeg" id="image" class="card-img" alt="...">
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="card-body">
+                                
+                                <h1 class="card-title" id="titre">TITRE</h1>
+                                <p class="card-text"id =" auteur">Auteur:</p>
+                                <p class="card-text" id=" serie">Série:</p>
+                                <p class="card-text" id=" numéro">numéro:</p>
+                                <h2 class="card-title" id="prix">prix :</h2>
+
+                            </div>
+                            <div class="card-body row">
+                                <div class="card-body col-xs-5">
+                                    <label for="qtite">Quantité:</label>
+                                    <select name="quantite" id="qtite">
+                                        <option value="">---</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="card-body col-xs-5">
+                                    <button class="btn btn-outline-dark btn-md mt-1 mb-3" id="ok" type="submit">Ajouter
+                                        au panier</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer >
+        <a href="contact.html" style="color:white;">Nous contacter</a>
+
+        <script src="bs4/js/jquery-3.5.1.slim.min.js"></script>
+        <script src="bs4/js/bootstrap.bundle.min.js"></script>
+        <script src="data/albums.js"></script>
+        <script src="data/auteurs.js"></script>
+        <script src="data/series.js"></script>
+        <script src="js/modeleBD.js"> </script>
+        <script src="detailBd.html"></script>
+        <script src="BDD.js"></script>
+        
+</body>
+
+</html>

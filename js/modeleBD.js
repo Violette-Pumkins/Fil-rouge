@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
 	    // Recherche des albums de la série
 	    for (var [idAlbum, album] of albums.entries()) {
 	        if (album.idSerie == idSerie) {
-	            console.log(serie.nom+", Album N°"+album.numero+" "+album.titre+", Auteur:"+auteurs.get(album.idAuteur).nom);
+	           // console.log(serie.nom+", Album N°"+album.numero+" "+album.titre+", Auteur:"+auteurs.get(album.idAuteur).nom);
 	        }
 	    }
 	    

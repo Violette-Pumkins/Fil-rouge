@@ -8,9 +8,11 @@
 
     font-size:large;
     color: white;
-    background-size: cover;
-    background-position: center;
-    background-color:#556B2F ; height: 200px; color: white;
+    /* background-size: cover;
+    background-position: center; */
+    background-color:#556B2F ; 
+    color: white;
+
 } 
 
 
@@ -36,8 +38,15 @@ border-radius: 10px;
 } 
 #cards{
     max-height:800px;
-    overflow: scroll;
+    overflow-x:hidden;
+    
 }
+ ::-webkit-scrollbar{
+    width: 14px;
+	height: 14px;
+	background: #bfb6a3 url(images/bg-blog-repeat.png) 0 0 repeat;
+
+} 
 .card-text1{
     font-size: medium;
 } 

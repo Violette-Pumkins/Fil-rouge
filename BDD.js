@@ -1,83 +1,95 @@
 // variables nécessaires
-  
+ const val = albums.keys();
+ 
 
 // initialiser cards
-function initCard(){
-     albums.forEach(e => {
-      createCards(e);  
-    });
-       
+function initCard() {
+  albums.forEach(e => {
+    createCards(e); 
+     
+  
+  });
+
 }
 
-//  var reg=/'+/g;
-   
-//   =.replace(reg,"");
-   console.log(albums.titre);
-// fonction regex
-
-
-
-   
 // créer cards
 // attribuer informations
-function createCards(bdd){
+function createCards(bdd) {
+
+ var idbd= val.next().value;
+  var serie = series.get(bdd.idSerie);
+  var nomart = auteurs.get(bdd.idAuteur)
+
+  // creation div container
+  var divCol = document.createElement("div");
+  divCol.setAttribute("class", "col-xs-6 col-md-4 col-sm-6 col-lg-3 mb-4")
+  var listmedia = document.getElementById("card-contain")
+  listmedia.appendChild(divCol);
+
+  // creation div card
+  var divPanel = document.createElement("div");
+  divPanel.setAttribute("class", "card");
+  divCol.appendChild(divPanel);
+
+//  abonnement div card click
+
+  divPanel.addEventListener("click", function(e){localStock(val)})
+
+
+  //image
+  var newimg = document.createElement("img");
+  newimg.setAttribute("class", "card-img-top p-1");
+  var nomFic = serie.nom + '-' + bdd.numero + '-' + bdd.titre;
+  newimg.src = "albumsMini/" + nomFic + ".jpg";
+  nomFic.replaceAll(/'|!|\?|\.|"|:|\$/g, "");
+  divPanel.appendChild(newimg);
+
+  // idbd
+  // creation input valeur bd
+ 
+  var inputbd = document.createElement("input");
+  inputbd.setAttribute("type", "hidden");
+  inputbd.innerHTML= idbd
+  divPanel.appendChild(inputbd);
   
+  // var inputbd = document.createElement("value");
+  // inputbd.setAttribute("type", "text");
+  // inputbd.innerHTML= idbd
+  // divPanel.appendChild(inputbd);
 
-    var serie = series.get(bdd.idSerie);
-    var nomart = auteurs.get(bdd.idAuteur)
-    
-    // creation div container
-    var divCol = document.createElement("div");
-    divCol.setAttribute("class", "col-xs-6 col-md-4 col-sm-6 col-lg-3 mb-4")
-    var listmedia = document.getElementById("card-contain")
-    listmedia.appendChild(divCol);
+  // titre
+  var titre = document.createElement("titre");
+  titre.setAttribute("class", "card-title")
+  titre.innerHTML = bdd.titre;
+  divPanel.appendChild(titre);
 
-    // creation div card
-    var divPanel= document.createElement("div");
-    divPanel.setAttribute("class","card");
-    divCol.appendChild(divPanel);
+  // // auteur
+  var art = document.createElement("auteur");
+  art.setAttribute("class", "card-text1")
+  art.innerHTML = nomart.nom;
+  divPanel.appendChild(art);
 
-    //image
-    var newimg = document.createElement("img");
-    newimg.setAttribute("class","card-img-top p-1");
-    nomFic = serie.nom + '-' + bdd.numero + '-' + bdd.titre;
+  // // serie
+  var groupe = document.createElement("serie");
+  groupe.setAttribute("class", "card-text2")
+  groupe.innerHTML = serie.nom;
+  divPanel.appendChild(groupe);
 
-    nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
+  // prix
+  var prix = document.createElement("prix");
+  prix.setAttribute("class", "card-text3")
+  prix.innerHTML = bdd.prix;
+  divPanel.appendChild(prix);
 
-    afficheAlbums(
-      $("#albumMini"),
-      $("#album"),
-      "albums/" + nomFic + ".jpg",
-      "albumsMini/" + nomFic + ".jpg"
-    );
 
-    
-     
-    divPanel.appendChild(newimg);
-
-    // titre
-    var titre= document.createElement("titre");
-    titre.setAttribute("class","card-title")
-    titre.innerHTML=bdd.titre;
-    divPanel.appendChild(titre);
-
-    // // auteur
-    var art= document.createElement("auteur");
-    art.setAttribute("class","card-text1")
-    art.innerHTML=nomart.nom;
-    divPanel.appendChild(art);
-
-    // // serie
-    var groupe= document.createElement("serie");
-    groupe.setAttribute("class","card-text2")
-    groupe.innerHTML=serie.nom;
-    divPanel.appendChild(groupe);
-
-    // prix
-    var prix = document.createElement("prix");
-    prix.setAttribute("class","card-text3")
-    prix.innerHTML=bdd.prix;
-    divPanel.appendChild(prix);
+  function localStock(thing){
+  var prr= localStorage.cle=idbd;
+  window.location.href="detailBD.html";
+  console.log(prr)
+}
 
 }
+
+
 initCard();
+
