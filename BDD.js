@@ -22,7 +22,7 @@ function createCards(bdd) {
 
   // creation div container
   var divCol = document.createElement("div");
-  divCol.setAttribute("class", "col-xs-6 col-md-4 col-sm-6 col-lg-3 mb-4")
+  divCol.setAttribute("class", "col-xs-6 col-md-4 col-sm-6 col-lg-3 mb-4 p-1 divcol")
   var listmedia = document.getElementById("card-contain")
   listmedia.appendChild(divCol);
 
@@ -63,7 +63,13 @@ function createCards(bdd) {
   titre.innerHTML = bdd.titre;
   divPanel.appendChild(titre);
 
-  // // auteur
+  // tomes
+  var tome = document.createElement("tome");
+  tome.setAttribute("class", "card-text")
+  tome.innerHTML = "Tome: "+bdd.numero;
+  divPanel.appendChild(tome);
+  
+  // auteur
   var art = document.createElement("auteur");
   art.setAttribute("class", "card-text1")
   art.innerHTML = nomart.nom;
@@ -72,13 +78,13 @@ function createCards(bdd) {
   // // serie
   var groupe = document.createElement("serie");
   groupe.setAttribute("class", "card-text2")
-  groupe.innerHTML = serie.nom;
+  groupe.innerHTML = "serie: "+serie.nom;
   divPanel.appendChild(groupe);
 
   // prix
   var prix = document.createElement("prix");
   prix.setAttribute("class", "card-text3")
-  prix.innerHTML = bdd.prix;
+  prix.innerHTML = "prix: "+ bdd.prix;
   divPanel.appendChild(prix);
 
 
