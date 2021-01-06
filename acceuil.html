@@ -17,6 +17,7 @@
 
     <div class="container-fluid p-0">
         <div class="col-xs-12">
+            
             <div id="header" class="text-center" style="height:10vh; font-weight:bold; font-size:5vh;">
                 Site de Apolline et Violette
                 <a href="acceuil.html">
@@ -47,10 +48,11 @@
                                 <div class="mb-3">
                                     <label for="username" class="login">Password</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="password"
-                                            placeholder="Your password" required="">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Valid Password is required.
+                                        <input type="password" class="form-control" id="password" placeholder="Your password" required="">
+                                        <!-- oninput="check(this)"  -->
+                                            
+                                        <div class="invalid-feedback" style="width: 100%;" id="invalidPassword">
+                                            Votre Mot de passe doit faire entre 8 et 15 caractères, contenir au moins 1 lettre majuscule, 1 lettre minucule, 1 chiffre et 1 caractère spécial!
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +108,9 @@
         </div>
 
         <footer style="background-color: #B82A0C; height:10vh">
-            <a href="contact.html" style="color:white; text-align:center;">Nous contacter</a>
+            <div class="contact">
+                <a href="contact.html" style="color:white;">Nous contacter</a>
+                </div>
 
         </footer>
     

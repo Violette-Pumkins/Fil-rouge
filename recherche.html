@@ -4,64 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fil-rouge recherche</title>
+    <title>Fil-rouge</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bs4/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="bs4/css/font-awesome.min.css">
+    <!-- fichier css -->
     <link rel="stylesheet" href="recherche.css">
-
 </head>
 
-
-
-<body>
+<body class="body">
+    <div id="bg">
     <div class="container-fluid p-0">
-        <div id="header" class="p-5 text-center">
-            Site de Apolline et Violette
-            <a href="acceuil.html">
-            <img src="chaisebois-logo.png" style="height:70px; width:70px;">
-            </a>
-        </div>
+        <div class="col-xs-12">
+            <div id="header" class="text-center" style="height:10vh; font-weight:bold; font-size:5vh;">
+                Site de Apolline et Violette
+                <a href="acceuil.html">
+                    <img src="logo4.png" style="height:60px; width:60px;">
+                </a>
+            </div>
         </div>
 
     </div>
     <!-- dessous du header -->
-    <div id="bg">
-        <div class="column">
-            <header class="py-3 sticky-top">
-                <div class="row flex-nowrap justify-content-between align-items-center">
-                    <div class="col d-flex justify-content-end align-items-center">
-                        <a class="btn btn-sm btn-outline-light" href="#" id="basket">
-                            <span>
-                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                            </span>
-                        </a>
+    <!-- background -->
+    
+        <div class="column" style="height:auto">
+            <div class="col-sm-12 mt-1">
+                <header class=" pt-3 sticky-top">
+                    <div class="row flex-nowrap justify-content-between align-items-center">
+                        <div class="col d-flex justify-content-end align-items-center">
+                            <a class="btn btn-sm btn-outline-light" href="#" id="basket">
+                                <span>
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </span>
+                            </a>
 
+                        </div>
                     </div>
-                </div>
-            </header>
-
-
-            <div class="col col-sm-12">
-
-                <div class="col-lg-12 mt-3">
-                    <nav class="navbar navbar-light col-md-12 p-3 text-center" id="navbar">
-                        <div class="column col-lg-12">
-
-                            <h1 class="mb-3" id="options-co">Rechercher par:</h1>
-
-                            <!-- formulaire recherche -->
+                </header>
+            </div>
+            
+            <div class="col-sm-12 sidenav mt-3 ml-3">
+                <nav class="navbar navbar-light col-sm-12 text-center" id="navbar"></nav>
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2 w-100">
+                            <h7 class="mb-3" id="options-co">Rechercher par:</h7>
 
                             <form class="needs-validation mt-3" novalidate="">
                                 <!-- recherche par titre -->
-                                <div class="row ">
-                                    <div class="col-md-12 w-100">
+                                <div class="row">
+                                    <div class="col-sm-12 w-100">
+
                                         <div class="m-3">
                                             <label for="text" class="search">Rechercher par Titre </label>
                                             <input type="text" class="form-control" id="titre" placeholder="titre">
                                             <div class="invalid-feedback">
-                                                Please enter a valid name.
+                                                Oups, une faute d'orthographe peut être?
                                             </div>
                                         </div>
                                         <!-- recherche par serie -->
@@ -69,7 +68,7 @@
                                             <label for="text" class="search">Rechercher par série</label>
                                             <input type="text" class="form-control" id="serie" placeholder="serie">
                                             <div class="invalid-feedback">
-                                                Please enter a valid name.
+                                                Oups, une faute d'orthographe peut être?
                                             </div>
                                         </div>
                                         <!-- recherche par auteur -->
@@ -77,38 +76,52 @@
                                             <label for="text" class="search">Rechercher par Auteur </label>
                                             <input type="text" class="form-control" id="auteur" placeholder="auteur">
                                             <div class="invalid-feedback">
-                                                Please enter a valid name.
+                                                Oups, une faute d'orthographe peut être?
                                             </div>
                                         </div>
 
                                         <div class="input-group-append">
-                                            <button type="submit" class="btn btn-outline-light btn-block btn-md" id="search">
+
+                                            <div class="col-sm-6 offset-sm-2">
+                                            <button type="submit" class="btn btn-outline-light btn-lg" style="width:50vh;"
+                                                id="search">
                                                 <i class="fa fa-search" aria-hidden="true"></i>
                                             </button>
+                                            </div>
+
                                         </div>
                                     </div>
                             </form>
+
                         </div>
 
-                </div>
+                    </div>
                 </nav>
             </div>
-            <div class="col-md-12 my-3 bg-dark" style="height:1500px;">
-                <div class="cd-grid col-sm-4 " id="cards">
-                    <div class="row" id="card-contain">
+            
+        </div>
+        <!-- article a droite -->
+
+        <div class="col-sm-8 offset-sm-2 my-3">
+
+            <div class="col-lg-12" id="cards" style="height:auto">
+                <div class="row " id="card-contain">
 
 
-                    </div>
                 </div>
             </div>
         </div>
+
+
     </div>
 
-    <footer style="background-color: #B82A0C;">
-        <a href="nousconatcter.html" style="color:white;">Nous contacter</a>
-
+    <footer style="background-color: #B82A0C; height:10vh">
+        <div class="contact">
+        <a href="contact.html" style="color:white;">Nous contacter</a>
+        </div>
     </footer>
 
+    </div>
 
     <script src="bs4/js/jquery-3.5.1.slim.min.js"></script>
     <script src="bs4/js/bootstrap.bundle.min.js"></script>
@@ -116,6 +129,7 @@
     <script src="data/auteurs.js"></script>
     <script src="data/series.js"></script>
     <script src="js/modeleBD.js"> </script>
+    <script src="BDD.js"></script>
 </body>
 
 </html>
