@@ -39,21 +39,20 @@
                             <form class="needs-validation mt-3" novalidate="">
                                 <div class="mb-3">
                                     <label for="email" class="login">Email </label>
-                                    <input type="email" class="form-control" id="email" placeholder="Your mail">
+                                    <input type="email" class="form-control" id="email" placeholder="Your mail" required="required">
 
-                                    <div class="invalid-feedback">
-                                        Please enter a valid email address for connexion.
+                                    <div class="invalid-feedback" id="invalidmail">
+                                        Veuillez entrer une adresse mail valide.
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="username" class="login">Password</label>
-                                    <div class="input-group">
-                                        <input type="password" class="form-control" id="password" placeholder="Your password" required="">
-                                        <!-- oninput="check(this)"  -->
+                                    <div class="input-group" id="passwee">
+                                        <input type="text" class="form-control" id="password" placeholder="Your password" required="required" aria-describedby="invalidPass">
                                             
-                                        <div class="invalid-feedback" style="width: 100%;" id="invalidPassword">
+                                        <!-- <div class="invalid-feedback" style="width: 100%;" id="invalidPass">
                                             Votre Mot de passe doit faire entre 8 et 15 caractères, contenir au moins 1 lettre majuscule, 1 lettre minucule, 1 chiffre et 1 caractère spécial!
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <button class="btn btn-outline-light btn-md mt-1 mb-3" id="ok"
@@ -87,7 +86,7 @@
                         <div class="col d-flex justify-content-end align-items-center">
                             <a class="btn btn-sm btn-outline-light"href="#" id="basket">
                                 <span>
-                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    <i class="fa fa-shopping-basket" href="panier.js" aria-hidden="true"></i>
                                 </span>
                             </a>
 
@@ -121,10 +120,9 @@
     <script src="data/albums.js"></script>
     <script src="data/auteurs.js"></script>
     <script src="data/series.js"></script>
-    <script src="js/modeleBD.js"> </script>
-    <script src="BDD.js"></script>
-    <script src="detailBd.html"></script>
-    <script src="detail.js"></script>
+    <script src="bdd.js"></script>
+    <!-- <script src="detailBd.html"></script> -->
+    <!-- <script src="detail.js"></script> -->
     
     
 </body>
