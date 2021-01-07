@@ -56,6 +56,8 @@ border-radius: 10px;
    background-color: rgb(248, 235, 176);
    padding-bottom: 5px;
    height:430px;
+   /* gerer la hauteur des cards en focntion des dim de ecran
+    */
 }
 
 ::-webkit-scrollbar{

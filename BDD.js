@@ -88,12 +88,11 @@ function createCards(bdd) {
   divPanel.appendChild(prix);
 
 
-  function localStock(thing) {
-    var prr = localStorage.cle = idbd;
-    window.location.href = "detailBD.html";
-    console.log(prr)
+  function localStock(thing){
+    var detailBd= localStorage.detailBd=idbd;
+    window.location.href="detailBD.html";
+    console.log(detailBd);
   }
-
 }
 
 
@@ -176,6 +175,10 @@ function checkMail(inputtext) {
     return false;
   }
 }
-checkPassword(pass);
-checkMail(mail);
 // control sortant et non submit en cas erreur.
+// fonction pour check la validité de mes champs par click submit
+
+
+
+
+
