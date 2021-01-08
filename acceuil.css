@@ -14,15 +14,12 @@
     color: white;
 
 } 
-.contact{
-    text-align: center;
-}
+
 
 
 #options-co{
     font-weight:bold;
     margin-bottom:10px;
-    font-size:large;
 }
 #recherche,.login,#options-co,.search{
     color:white;
@@ -36,13 +33,6 @@ border-radius: 10px;
 
    border-radius:10px 0px 0px 10px; 
 }
-.search{
-    font-weight: bold;
-}
-.search:hover{
-    color:black;
-    font-style: italic;
-}
 #password, #ok, #basket{
     border-radius: 10px 10px 10px 10px;
 } 
@@ -55,9 +45,7 @@ border-radius: 10px;
    box-shadow: rgb(116, 62, 2);
    background-color: rgb(248, 235, 176);
    padding-bottom: 5px;
-   height:430px;
-   /* gerer la hauteur des cards en focntion des dim de ecran
-    */
+   height:55vh;
 }
 
 ::-webkit-scrollbar{

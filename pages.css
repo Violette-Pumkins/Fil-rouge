@@ -8,3 +8,6 @@
 #panier{
   line-height: 20px;
 }
+#del:hover{
+cursor: pointer;
+}

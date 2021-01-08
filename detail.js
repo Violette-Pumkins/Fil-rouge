@@ -24,8 +24,8 @@ ajout.addEventListener("click", ajoutPanier);
 // APPEL DE FONCTION
 details();
 
-//FONCTIONS
-//AFFICHE LES DETAILS DE LA BD CHOISI
+//FONCTIONS DETAIL
+//Affiche les details de la bd qui à été cliquée
 function details(){
     txtSerie.innerHTML = "Série: " + serie.nom;
     txtNumero.innerHTML = "Numéro: " + album.numero;
@@ -36,7 +36,8 @@ function details(){
     }
 
 
-//RECUPERE LE LOCAL STORAGE CONTENANT LA LISTE DES AJOUTS PANIER
+//FONCTION AJOUTPANIER
+//Ajoute depuis la page détail ,dans le localStorage ,la clé de la bd lors du clic sur ajouter au panier dans une liste
 function ajoutPanier() {
     var num = localStorage.detailBd;
 

@@ -17,7 +17,6 @@
 
     <div class="container-fluid p-0">
         <div class="col-xs-12">
-            
             <div id="header" class="text-center" style="height:10vh; font-weight:bold; font-size:5vh;">
                 Site de Apolline et Violette
                 <a href="acceuil.html">
@@ -39,20 +38,20 @@
                             <form class="needs-validation mt-3" novalidate="">
                                 <div class="mb-3">
                                     <label for="email" class="login">Email </label>
-                                    <input type="email" class="form-control" id="email" placeholder="Your mail" required="required">
+                                    <input type="email" class="form-control" id="email" placeholder="Your mail">
 
-                                    <div class="invalid-feedback" id="invalidmail">
-                                        Veuillez entrer une adresse mail valide.
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address for connexion.
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="username" class="login">Password</label>
-                                    <div class="input-group" id="passwee">
-                                        <input type="text" class="form-control" id="password" placeholder="Your password" required="required" aria-describedby="invalidPass">
-                                            
-                                        <!-- <div class="invalid-feedback" style="width: 100%;" id="invalidPass">
-                                            Votre Mot de passe doit faire entre 8 et 15 caractères, contenir au moins 1 lettre majuscule, 1 lettre minucule, 1 chiffre et 1 caractère spécial!
-                                        </div> -->
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Your password" required="">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Valid Password is required.
+                                        </div>
                                     </div>
                                 </div>
                                 <button class="btn btn-outline-light btn-md mt-1 mb-3" id="ok"
@@ -66,9 +65,9 @@
                                             <i class="fa fa-search" aria-hidden="true"></i>
                                         </button>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Recherche" id="searchBar">
+                                    <input type="text" class="form-control" placeholder="Recherche">
+
                                 </div>
-                                
                                 <a href="recherche.html" class="search"> Recherche Avancée</a>
                             </form>
    
@@ -84,9 +83,9 @@
                 <header class="py-3 sticky-top" >
                     <div class="row flex-nowrap justify-content-between align-items-center">
                         <div class="col d-flex justify-content-end align-items-center">
-                            <a class="btn btn-sm btn-outline-light"href="#" id="basket">
+                            <a class="btn btn-sm btn-outline-light "  href="panier.html">
                                 <span>
-                                    <i class="fa fa-shopping-basket" href="panier.js" aria-hidden="true"></i>
+                                    <i class="fa fa-shopping-basket " aria-hidden="true"></i>
                                 </span>
                             </a>
 
@@ -96,7 +95,7 @@
                 <div class="col-md-11 my-3">
 
                     <div class="col-lg-12" id="cards" style="height:65vh">
-                        <div class="row " id="card-contain">
+                        <div class="row no-gutters "id="card-contain">
                         
 
                         </div>
@@ -107,9 +106,7 @@
         </div>
 
         <footer style="background-color: #B82A0C; height:10vh">
-            <div class="contact">
-                <a href="contact.html" style="color:white;">Nous contacter</a>
-                </div>
+            <a href="contact.html" style="color:white; text-align:center;">Nous contacter</a>
 
         </footer>
     
@@ -120,11 +117,10 @@
     <script src="data/albums.js"></script>
     <script src="data/auteurs.js"></script>
     <script src="data/series.js"></script>
-    <script src="bdd.js"></script>
-     <!-- <script src="detailBd.html"></script> 
-     <script src="detail.js"></script> -->
+    <script src="BDD.js"></script>
+  
     
-    
+
 </body>
 
 </html>

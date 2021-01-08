@@ -11,32 +11,36 @@
     <link rel="stylesheet" href="bs4/css/font-awesome.min.css">
     <!-- fichier css -->
     <link rel="stylesheet" href="acceuil.css">
-
+    <link rel="stylesheet" href="pages.css">
 </head>
 
 <body class="body">
 
-    <div class="container-fluid p-0" style="height: 20%;">
+    <div class="container-fluid p-0">
         <div class="col-xs-12">
-            <div id="header" class="p-5 text-center">
+            <div id="header" class="text-center" style="height:10vh; font-weight:bold; font-size:5vh;">
                 Site de Apolline et Violette
+                <a href="acceuil.html">
+                    <img src="logo4.png" style="height:60px; width:60px;">
+                </a>
             </div>
         </div>
 
     </div>
     <!-- dessous du header -->
+    <!-- background -->
     <div id="bg">
-        <div class="row">
+        <div class="row" style="height:80vh">
             <div class="col-sm-3 sidenav mt-3">
                 <nav class="navbar navbar-light col-md-12 sticky-top p-3" id="navbar">
                     <div class="row">
                         <div class="col-md-12 w-100">
                             <h7 class="mb-3" id="options-co">Options de connexions:</h7>
-
                             <form class="needs-validation mt-3" novalidate="">
                                 <div class="mb-3">
                                     <label for="email" class="login">Email </label>
                                     <input type="email" class="form-control" id="email" placeholder="Your mail">
+
                                     <div class="invalid-feedback">
                                         Please enter a valid email address for connexion.
                                     </div>
@@ -64,9 +68,9 @@
                                     <input type="text" class="form-control" placeholder="Recherche">
 
                                 </div>
-                                <a href="recherche.html" id="recherche">Recherche Avancée</a>
-
+                                <a href="recherche.html" class="search"> Recherche Avancée</a>
                             </form>
+
                         </div>
 
                     </div>
@@ -74,58 +78,72 @@
             </div>
 
             <!-- article a droite -->
-            <div class="col col-sm-9 "style="height: 70%;">
+            <div class="col col-xs-9">
 
                 <header class="py-3 sticky-top">
                     <div class="row flex-nowrap justify-content-between align-items-center">
                         <div class="col d-flex justify-content-end align-items-center">
-                            <a class="btn btn-sm btn-outline-light" href="#" id="basket">
+                            <a class="btn btn-sm btn-outline-light "href="panier.html">
                                 <span>
-                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    <i class="fa fa-shopping-basket " aria-hidden="true"></i>
                                 </span>
                             </a>
 
                         </div>
                     </div>
-                </header>
-                <div class="col-md-11 my-3 bg-light" style="height:100%;">
-                    <div class="col-xs-12 text-center" id="cards">
-                        <div class="row  " id="contact">
-                            <div class="col xs-12 ">
-                                <form action="" class="well">
-                                    <h1>Nous contacter</h1>
-                                    <label for="emailinput">Votre e-mail</label>
-                                    <input type="email" name="emailinput" required id="email" placeholder="contact@demo.fr">
-                                    <br>
-                                    <br>
-                                    <label for="nameinput">Votre nom</label>
-                                    <input type="text" name="nameinpuit" id="nom">
-                                    <br>
-                                    <br>
-                                    <label for="message">Votre message</label>
-                                   <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                                   <br>
-                                   <button class="btn btn-outline-dark btn-md mt-1 mb-3" id="envoyer" type="submit">Envoyer</button>
-                            </div>
 
+                    <div class="col-md-11 my-3 bg-light" style="height:100%;">
+                        <div class="col-xs-12 text-center" id="cards">
+                            <div class="row  " id="contact">
+                                <div class="col xs-12 ">
+                                    <form action="" class="well">
+                                        <h1>Nous contacter</h1>
+                                        <label for="emailinput">Votre e-mail</label>
+                                        <input type="email" name="emailinput" required id="email" placeholder="contact@demo.fr">
+                                        <br>
+                                        <br>
+                                        <label for="nameinput">Votre nom</label>
+                                        <input type="text" name="nameinpuit" id="nom">
+                                        <br>
+                                        <br>
+                                        <label for="message">Votre message</label>
+                                       <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                                       <br>
+                                       <button class="btn btn-outline-dark btn-md mt-1 mb-3" id="envoyer" type="submit">Envoyer</button>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
+
+
         </div>
-
-        <footer style="background-color: #B82A0C; height: 100px;">
-            <a href="contact.html" style="color:white;">Nous contacter</a>
-
-        </footer>
     </div>
+
+    <footer style="background-color: #B82A0C; height:10vh">
+        <a href="contact.html" style="color:white; text-align:center;">Nous contacter</a>
+
+    </footer>
+
+    </div>
+
     <script src="bs4/js/jquery-3.5.1.slim.min.js"></script>
     <script src="bs4/js/bootstrap.bundle.min.js"></script>
     <script src="data/albums.js"></script>
     <script src="data/auteurs.js"></script>
     <script src="data/series.js"></script>
-    <script src="js/modeleBD.js"> </script>
+    <script src="detail.js"></script>
+    
+
+
 </body>
 
 </html>

@@ -1,7 +1,6 @@
 // variables nécessaires
 const val = albums.keys();
 
-initCard();
 
 // initialiser cards
 function initCard() {
@@ -92,15 +91,57 @@ function createCards(bdd) {
   prix.innerHTML = "prix: " + bdd.prix + " €";
   divPanel.appendChild(prix);
 
+
   function localStock(thing){
     var detailBd= localStorage.detailBd=idbd;
-    window.location.href="detailBD.html";
+    window.location.href="detailBd.html";
     console.log(detailBd);
-  } 
- 
+  }
 }
 
+
+initCard();
+
+//  gestion mdp/mail
+var pass = document.getElementById("password")
+var mail= document.getElementById("email")
+
+
+
+// fonction control entrant de mdp
+
+function checkPassword(pass) {
   
+  var decipass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+  var msg= "Votre Mot de passe doit faire entre 8 et 15 caractères, contenir au moins 1 lettre majuscule, 1 lettre minucule, 1 chiffre et 1 caractère spécial!";
+  if (pass.value.match(decipass)) {
+    alert('Correct, try another...')
+    
+    return true;
+  }
+  else {
+    alert(msg)
+    console.log(checkPassword());
+    return false;
+  }
+}
+
+
+function checkMail(inputtext) {
+  console.log(checkMail);
+  var decimail=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  var msg2="Veuillez entrer une adresse mail valide." 
+  if (inputtext.value.match(decimail)) {
+    alert('Correct, try another...')
+    return true;
+  }
+  else {
+    alert(msg2);
+    return false;
+  }
+}
+
+
 
 
 
