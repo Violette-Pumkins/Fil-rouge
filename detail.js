@@ -1,3 +1,6 @@
+// Ecrit par : Apolline LE HIRITTE
+
+//VARIABLE
 var txtSerie = document.getElementById("serie");
 var txtNumero = document.getElementById("numero");
 var txtTitre = document.getElementById("titre");
@@ -10,17 +13,30 @@ var ajout = document.getElementById("ajout");
 var album = albums.get(num);
 var serie = series.get(album.idSerie);
 var auteur = auteurs.get(album.idAuteur);
+var monPanier = document.getElementById("basket");
+var nomFic = serie.nom + '-' + album.numero + '-' + album.titre;
+var newnomFic=nomFic.replaceAll(/'|!|\?|\.|"|:|\$/g, "");
 
-txtSerie.innerHTML = "Série: " + serie.nom;
-txtNumero.innerHTML = "Numéro: " + album.numero;
-txtTitre.innerHTML = album.titre;
-txtAuteur.innerHTML = "Auteur: " + auteur.nom;
-txtPrix.innerHTML = "Prix: " + album.prix+"€";
-img.src= "albums/"+ serie.nom + '-' + album.numero + '-' + album.titre + '.jpg';
-
+//ABONNEMENT
 ajout.addEventListener("click", ajoutPanier);
 
-//RECUPERE LA LISTE DU LOCAL STORAGE CONTENANT LA LISTE DES AJOUTS PANIER
+
+// APPEL DE FONCTION
+details();
+
+//FONCTIONS
+//AFFICHE LES DETAILS DE LA BD CHOISI
+function details(){
+    txtSerie.innerHTML = "Série: " + serie.nom;
+    txtNumero.innerHTML = "Numéro: " + album.numero;
+    txtTitre.innerHTML = album.titre;
+    txtAuteur.innerHTML = "Auteur: " + auteur.nom;
+    txtPrix.innerHTML = "Prix: " + album.prix+"€";
+    img.src = "albums/" + newnomFic + ".jpg";
+    }
+
+
+//RECUPERE LE LOCAL STORAGE CONTENANT LA LISTE DES AJOUTS PANIER
 function ajoutPanier() {
     var num = localStorage.detailBd;
 
@@ -32,4 +48,4 @@ function ajoutPanier() {
         panier = localStorage.setItem("panier", newliste);
     }
 
-}
+} 
